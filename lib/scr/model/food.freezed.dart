@@ -148,7 +148,8 @@ class __$$FoodImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true, anyMap: true)
 class _$FoodImpl extends _Food {
   _$FoodImpl(
       {required this.id,

@@ -12,11 +12,11 @@ class FoodCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ListTile(
-      leading: Icon(Icons.dining),
+      leading: const Icon(Icons.dining),
       title: Text(food.name),
       subtitle: Text(food.caption),
       trailing: PopupMenuButton(
-        icon: Icon(Icons.more_vert),
+        icon: const Icon(Icons.more_vert),
         itemBuilder: (context) {
           return [
             PopupMenuItem(
@@ -30,7 +30,7 @@ class FoodCard extends ConsumerWidget {
                   },
                 );
               },
-              child: Text("Edit"),
+              child: const Text("Edit"),
             ),
           ];
         },

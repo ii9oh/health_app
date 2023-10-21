@@ -6,7 +6,7 @@ part of 'food.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FoodImpl _$$FoodImplFromJson(Map<String, dynamic> json) => _$FoodImpl(
+_$FoodImpl _$$FoodImplFromJson(Map json) => _$FoodImpl(
       id: json['id'] as String,
       name: json['name'] as String,
       calories: json['calories'] as int,

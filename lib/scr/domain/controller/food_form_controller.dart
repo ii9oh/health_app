@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:health_app/scr/domain/controller/food_list_conroller.dart';
+import 'package:health_app/scr/domain/controller/food_list_controller.dart';
 import 'package:health_app/scr/model/food.dart';
-import 'package:health_app/scr/services/food_serivce.dart';
+import 'package:health_app/scr/services/food_service.dart';
 
 class FoodFormController extends StateNotifier<Food> {
   final Ref ref;

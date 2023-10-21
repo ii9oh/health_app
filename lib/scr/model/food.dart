@@ -6,6 +6,9 @@ part 'food.g.dart';
 @freezed
 class Food with _$Food {
   const Food._();
+
+  // ignore: invalid_annotation_target
+  @JsonSerializable(explicitToJson: true, anyMap: true)
   factory Food({
     required String id,
     required String name,
@@ -15,7 +18,7 @@ class Food with _$Food {
     required int protein,
   }) = _Food;
 
-  factory Food.fromJson(Map<String, dynamic> json) => _$FoodFromJson(json);
+  factory Food.fromJson(Map<String, Object?> json) => _$FoodFromJson(json);
 
   factory Food.empty() {
     return Food(

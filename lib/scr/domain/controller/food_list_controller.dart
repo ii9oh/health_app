@@ -1,4 +1,6 @@
-import 'package:health_app/scr/services/food_serivce.dart';
+// ignore_for_file: depend_on_referenced_packages
+
+import 'package:health_app/scr/services/food_service.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:health_app/scr/model/food.dart';
 import 'package:collection/collection.dart';

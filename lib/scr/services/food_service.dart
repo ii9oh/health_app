@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:health_app/scr/model/food.dart';
-import 'package:health_app/scr/services/based_serivce.dart';
+import 'package:health_app/scr/services/based_service.dart';
 
 class FoodService extends BasedService {
   static const boxName = "food";
@@ -12,7 +12,7 @@ class FoodService extends BasedService {
 
     List<Food> foods = [];
     for (final entry in items.entries) {
-      final Map<String, dynamic> data = {
+      final Map<String, Object?> data = {
         ...entry.value,
         'id': entry.key,
       };

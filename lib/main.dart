@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:health_app/scr/view/food_list_screen.dart';
+import 'package:health_app/scr/view/entry_list_screen.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const FoodListScreen(),
+      home: const EntryListScreen(),
     );
   }
 }

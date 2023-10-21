@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:health_app/scr/domain/controller/food_list_conroller.dart';
-import 'package:health_app/scr/services/food_serivce.dart';
+import 'package:health_app/scr/domain/controller/food_list_controller.dart';
+import 'package:health_app/scr/services/food_service.dart';
 import 'package:health_app/scr/shared/food_card.dart';
 
 class FoodList extends ConsumerWidget {

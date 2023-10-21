@@ -20,7 +20,7 @@ Entry _$EntryFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Entry {
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   Food get food => throw _privateConstructorUsedError;
   DateTime get enteredAt => throw _privateConstructorUsedError;
 
@@ -34,7 +34,7 @@ abstract class $EntryCopyWith<$Res> {
   factory $EntryCopyWith(Entry value, $Res Function(Entry) then) =
       _$EntryCopyWithImpl<$Res, Entry>;
   @useResult
-  $Res call({int id, Food food, DateTime enteredAt});
+  $Res call({String id, Food food, DateTime enteredAt});
 
   $FoodCopyWith<$Res> get food;
 }
@@ -60,7 +60,7 @@ class _$EntryCopyWithImpl<$Res, $Val extends Entry>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       food: null == food
           ? _value.food
           : food // ignore: cast_nullable_to_non_nullable
@@ -88,7 +88,7 @@ abstract class _$$EntryImplCopyWith<$Res> implements $EntryCopyWith<$Res> {
       __$$EntryImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, Food food, DateTime enteredAt});
+  $Res call({String id, Food food, DateTime enteredAt});
 
   @override
   $FoodCopyWith<$Res> get food;
@@ -113,7 +113,7 @@ class __$$EntryImplCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       food: null == food
           ? _value.food
           : food // ignore: cast_nullable_to_non_nullable
@@ -127,15 +127,17 @@ class __$$EntryImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$EntryImpl implements _Entry {
-  _$EntryImpl({required this.id, required this.food, required this.enteredAt});
+
+@JsonSerializable(explicitToJson: true, anyMap: true)
+class _$EntryImpl extends _Entry {
+  _$EntryImpl({required this.id, required this.food, required this.enteredAt})
+      : super._();
 
   factory _$EntryImpl.fromJson(Map<String, dynamic> json) =>
       _$$EntryImplFromJson(json);
 
   @override
-  final int id;
+  final String id;
   @override
   final Food food;
   @override
@@ -175,16 +177,17 @@ class _$EntryImpl implements _Entry {
   }
 }
 
-abstract class _Entry implements Entry {
+abstract class _Entry extends Entry {
   factory _Entry(
-      {required final int id,
+      {required final String id,
       required final Food food,
       required final DateTime enteredAt}) = _$EntryImpl;
+  _Entry._() : super._();
 
   factory _Entry.fromJson(Map<String, dynamic> json) = _$EntryImpl.fromJson;
 
   @override
-  int get id;
+  String get id;
   @override
   Food get food;
   @override
